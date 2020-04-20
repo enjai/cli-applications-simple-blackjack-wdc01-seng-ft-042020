@@ -60,6 +60,28 @@ def hit?(card_total)
  end
  end
  
+ def get_user_input 
+   gets.chomp.strip
+   
+end
+
+def hit? 
+  valid_inputs = ["h", "s"]
+  
+  prompt_user
+  user_input = get_user_input
+  
+  until valid_inputs.include?(user_input)
+  invalid_command
+  prompt_user
+  user_input = get_user_input
+end
+if user_input == "h" 
+  card_total += deal_card
+end
+card_total
+
+
 
 #####################################################
 # get every test to pass before coding runner below #
