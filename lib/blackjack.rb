@@ -41,6 +41,10 @@ def initial_round
   return card_total
 end
 
+def initial_round
+  sum = deal_card + deal_card 
+  
+
 def invalid_command
   # code invalid_command here
   puts "Please enter a valid command"
